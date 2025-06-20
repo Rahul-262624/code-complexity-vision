@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+# ⏱️ Code Complexity Vision
 
-## Project info
+> A web app to analyze the **time complexity** of code, built using Lovable and Bolt  
+> 🔗 [Live Project](https://code-complexity-vision.lovable.app)
 
-**URL**: https://lovable.dev/projects/12241236-4947-4ead-8c6e-b88e7e42d737
+---
 
-## How can I edit this code?
+## 🚀 What I Built
 
-There are several ways of editing your application.
+This project lets users input Python code and instantly get an estimate of its **Big-O time complexity**, such as:
 
-**Use Lovable**
+- `O(1)` for constant time
+- `O(n)` for single loops
+- `O(n^2)` for nested loops
+- `O(2^n)` for recursion
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/12241236-4947-4ead-8c6e-b88e7e42d737) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🧰 Tools & Technologies
 
-**Use your preferred IDE**
+| Layer     | Stack                     |
+|-----------|---------------------------|
+| **Frontend**  | [Lovable](https://lovable.so) – no-code UI with React, Tailwind, Vite |
+| **Backend**   | [Bolt](https://bolt.new) – FastAPI server analyzing code |
+| **Hosting**   | Lovable App + Bolt.run |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🔗 Project Details
 
-Follow these steps:
+- 📥 **Frontend UI:** Custom-built with Lovable, includes:
+  - Code input box
+  - Analyze button
+  - Output text box for complexity
+- 🔍 **Backend API (Bolt):**
+  - Exposes a `/analyze` POST route
+  - Parses code using Python’s `ast` module
+  - Returns time complexity
+- 🔄 **Integrated via API request** from frontend to backend
+- 🌐 **CORS** enabled for cross-origin requests from Lovable to Bolt
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧪 Example Output
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+**Input Code:**
+```python
+for i in range(n):
+    for j in range(n):
+        print(i, j)
 ```
 
-**Edit a file directly in GitHub**
+**Result Displayed:**
+```
+Time Complexity: O(n^2)
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🧠 Future Enhancements
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- GPT-powered code explanation
+- JavaScript/TypeScript support
+- Visual graph of complexity over input size
+- VS Code extension version
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🙌 Built With
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- [Lovable](https://lovable.so)
+- [Bolt](https://bolt.new)
+- FastAPI, TypeScript, Tailwind, AST
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/12241236-4947-4ead-8c6e-b88e7e42d737) and click on Share -> Publish.
+## ✨ Live App
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+👉 [https://code-complexity-vision.lovable.app](https://code-complexity-vision.lovable.app)
